@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anivoflix - Official Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Bengali', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#E50914', // Netflix style Red
+                        primaryHover: '#B20710',
+                        darkBg: '#0B0B0F',
+                        cardBg: '#1A1A24',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #0B0B0F;
+            color: #ffffff;
+        }
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0F; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E50914; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B20710; 
+        }
+        .glass-effect {
+            background: rgba(26, 26, 36, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 top-0 glass-effect border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-3xl font-black text-white tracking-wider flex items-center gap-2">
+                        ANIVO<span class="text-primary">FLIX</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#domains" class="text-gray-300 hover:text-primary transition font-medium">ডোমেইনসমূহ</a>
+                    <a href="#tutorial" class="text-gray-300 hover:text-primary transition font-medium">টিউটোরিয়াল</a>
+                    <a href="#updates" class="text-gray-300 hover:text-primary transition font-medium">আপডেট চ্যানেল</a>
+                    <a href="#domains" class="bg-primary text-white px-6 py-2.5 rounded-md hover:bg-primaryHover transition font-semibold shadow-[0_0_15px_rgba(229,9,20,0.5)]">
+                        সাইটে প্রবেশ করুন
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-gray-800">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3 text-center">
+                <a href="#domains" class="block px-3 py-3 text-gray-300 hover:text-primary hover:bg-gray-800 rounded font-medium">ডোমেইনসমূহ</a>
+                <a href="#tutorial" class="block px-3 py-3 text-gray-300 hover:text-primary hover:bg-gray-800 rounded font-medium">টিউটোরিয়াল</a>
+                <a href="#updates" class="block px-3 py-3 text-gray-300 hover:text-primary hover:bg-gray-800 rounded font-medium">আপডেট চ্যানেল</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary rounded-full blur-[120px] opacity-20"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[30%] h-[30%] bg-blue-600 rounded-full blur-[100px] opacity-10"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-balance">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
+                আপনার প্রিয় অ্যানিমে দেখুন <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-500">সম্পূর্ণ বাংলায়</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                Anivoflix-এর অফিশিয়াল পোর্টালে আপনাকে স্বাগতম! মূল সাইট ব্লক হলে বা লিংক খুঁজে না পেলে, সর্বদা এই পোর্টাল ভিজিট করে আমাদের সর্বশেষ অ্যাক্টিভ ওয়েবসাইট লিংক পেয়ে যাবেন।
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a href="#domains" class="bg-primary text-white px-8 py-4 rounded-md hover:bg-primaryHover transition shadow-[0_0_20px_rgba(229,9,20,0.6)] font-bold text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-play"></i> মূল সাইটে যান
+                </a>
+                <a href="#tutorial" class="bg-cardBg text-white border border-gray-700 px-8 py-4 rounded-md hover:bg-gray-800 transition font-bold text-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-question"></i> কিভাবে ডাউনলোড করবেন?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Domains Section -->
+    <section id="domains" class="py-20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">অফিশিয়াল <span class="text-primary">ডোমেইনসমূহ</span></h2>
+                <p class="text-gray-400 text-lg">আমাদের বর্তমান অ্যাক্টিভ লিংকগুলো নিচে দেওয়া হলো। যেকোনো একটি ব্যবহার করে সাইটে প্রবেশ করুন।</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                
+                <!-- Domain Card 1 (Main) -->
+                <div class="glass-effect p-6 rounded-xl hover:border-primary transition duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Online
+                        </span>
+                        <span class="text-gray-500 text-sm">Main Server</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition">anivoflix.com</h3>
+                    <p class="text-gray-400 text-sm mb-6">আমাদের প্রধান ওয়েবসাইট। স্পিড সবচেয়ে ভালো।</p>
+                    <a href="#" class="block text-center w-full bg-gray-800 hover:bg-primary text-white py-3 rounded-md font-semibold transition">
+                        ভিজিট করুন <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Domain Card 2 (Mirror) -->
+                <div class="glass-effect p-6 rounded-xl hover:border-primary transition duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full border border-green-500/30 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Online
+                        </span>
+                        <span class="text-gray-500 text-sm">Mirror Server</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition">anivoflix.net</h3>
+                    <p class="text-gray-400 text-sm mb-6">মেইন সার্ভার সমস্যা করলে এটি ব্যবহার করুন।</p>
+                    <a href="#" class="block text-center w-full bg-gray-800 hover:bg-primary text-white py-3 rounded-md font-semibold transition">
+                        ভিজিট করুন <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- Domain Card 3 (Backup) -->
+                <div class="glass-effect p-6 rounded-xl hover:border-primary transition duration-300 group">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-3 py-1 rounded-full border border-yellow-500/30 flex items-center gap-2">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Backup
+                        </span>
+                        <span class="text-gray-500 text-sm">Backup Link</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-primary transition">anivoflix.org</h3>
+                    <p class="text-gray-400 text-sm mb-6">জরুরি সময়ের জন্য ব্যাকআপ ডোমেইন।</p>
+                    <a href="#" class="block text-center w-full bg-gray-800 hover:bg-primary text-white py-3 rounded-md font-semibold transition">
+                        ভিজিট করুন <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Watch & Download Tutorial Section -->
+    <section id="tutorial" class="py-20 bg-cardBg border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                
+                <!-- Video / Image Placeholder -->
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative rounded-2xl overflow-hidden aspect-video bg-gray-900 border border-gray-800">
+                        <!-- Placeholder for YouTube/Video Embed -->
+                        <img src="https://placehold.co/1280x720/0B0B0F/E50914?text=Tutorial+Video+Thumbnail" alt="Tutorial Video" class="w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button class="w-20 h-20 bg-primary/90 text-white rounded-full flex items-center justify-center text-3xl hover:bg-primary transition hover:scale-110 shadow-[0_0_30px_rgba(229,9,20,0.8)]">
+                                <i class="fa-solid fa-play ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tutorial Steps -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">কিভাবে দেখবেন এবং <span class="text-primary">ডাউনলোড</span> করবেন?</h2>
+                    <p class="text-gray-400 mb-8 text-lg">সাইট থেকে সরাসরি হাই-কোয়ালিটি অ্যানিমে দেখা বা ডাউনলোড করা খুব সহজ। নিচের ধাপগুলো অনুসরণ করুন অথবা ভিডিও টিউটোরিয়ালটি দেখুন।</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Step 1 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-primary font-bold text-xl border border-gray-700">
+                                ১
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">পছন্দের অ্যানিমে সিলেক্ট করুন</h4>
+                                <p class="text-gray-400">সাইটে প্রবেশ করে সার্চ বার ব্যবহার করে বা ক্যাটাগরি থেকে আপনার পছন্দের অ্যানিমেটি বেছে নিন।</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-primary font-bold text-xl border border-gray-700">
+                                ২
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">এপিসোড ও সার্ভার নির্বাচন</h4>
+                                <p class="text-gray-400">যে এপিসোড দেখতে চান তা সিলেক্ট করে ভিডিও প্লেয়ারের নিচে থাকা ফাস্ট সার্ভারগুলোতে ক্লিক করুন।</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-primary font-bold text-xl border border-gray-700">
+                                ৩
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">ওয়াচ বা ডাউনলোড বাটনে ক্লিক করুন</h4>
+                                <p class="text-gray-400">অনলাইনে দেখতে প্লে আইকনে চাপুন। আর ডাউনলোড করতে ভিডিও প্লেয়ারের নিচে থাকা 'Download' বাটনে ক্লিক করে কোয়ালিটি বেছে নিন।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Update Channel & Community Section -->
+    <section id="updates" class="py-20 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-600 rounded-full blur-[150px] opacity-5 -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">সর্বশেষ আপডেটের জন্য <span class="text-primary">যুক্ত থাকুন</span></h2>
+            <p class="text-gray-400 text-lg mb-10">নতুন ডোমেইন লিংক, লেটেস্ট অ্যানিমে এপিসোড রিলিজ এবং সাইটের যেকোনো আপডেটের খবর সবার আগে পেতে আমাদের চ্যানেলগুলোতে জয়েন করুন।</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Telegram Card -->
+                <a href="#" class="glass-effect p-8 rounded-2xl border border-gray-800 hover:border-[#0088cc] hover:bg-[#0088cc]/10 transition duration-300 flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-[#0088cc]/20 text-[#0088cc] rounded-full flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-telegram"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">টেলিগ্রাম চ্যানেল</h3>
+                    <p class="text-gray-400 text-sm">ডাউনলোড লিংক ও ফাস্ট আপডেটের জন্য</p>
+                </a>
+
+                <!-- Discord/Facebook Card -->
+                <a href="#" class="glass-effect p-8 rounded-2xl border border-gray-800 hover:border-[#5865F2] hover:bg-[#5865F2]/10 transition duration-300 flex flex-col items-center group">
+                    <div class="w-16 h-16 bg-[#5865F2]/20 text-[#5865F2] rounded-full flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">ডিসকর্ড সার্ভার</h3>
+                    <p class="text-gray-400 text-sm">কমিউনিটি আড্ডা ও রিকোয়েস্টের জন্য</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-black text-white tracking-wider">
+                    ANIVO<span class="text-primary">FLIX</span>
+                </a>
+            </div>
+            
+            <div class="text-center md:text-left text-sm">
+                <p>&copy; <span id="year"></span> Anivoflix. All rights reserved.</p>
+                <p class="mt-1 text-xs text-gray-600">This site does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</p>
+            </div>
+            
+            <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-primary hover:text-white transition border border-gray-800">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-[#0088cc] hover:text-white transition border border-gray-800">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('bg-darkBg', 'shadow-lg');
+                nav.classList.remove('glass-effect');
+            } else {
+                nav.classList.remove('bg-darkBg', 'shadow-lg');
+                nav.classList.add('glass-effect');
+            }
+        });
+    </script>
+</body>
+</html>
